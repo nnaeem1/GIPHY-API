@@ -1,4 +1,6 @@
 async function fetchGifs() {
+    const searchInput = document.quearySelector("#search-input");
+    const queary =searchInput.value;
     const response = await fetch("https://api.giphy.com/v1/gifs/search?api_key=xli6vVM7D7FArHRV97NsXB8sJygOCL1c&q=dog&limit=25&offset=0&rating=g&lang=en&bundle=messaging_non_clips");
     const data = await response.json();
     const images = data.data;
